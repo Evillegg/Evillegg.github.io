@@ -1,0 +1,81 @@
+.hero-bg{
+  padding: @grid-gutter-width 0;
+  background: @eville-dark-blue;
+  box-shadow: inset 0 0 @grid-gutter-width*5 rgba(0,0,0,0.5);
+  min-height: 100vh;
+}
+
+.hero-image{
+  filter: grayscale(100%) contrast(300%);
+  opacity: 0.1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hero-image-overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0), @eville-dark-blue);
+}
+
+.hero-bg-tab{
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.cpt{
+  color: @eville-bright-red;
+}
+
+.team-cpt-photo{
+  border-radius: @grid-gutter-width/3;
+  margin-bottom: @grid-gutter-width;
+  min-width: 100%;
+}
+
+.team-illustration{
+  //animation: 0.8s slideInFromBottom ease-in-out;
+}
+
+.team-title{
+  /*animation: 0.8s slideFromLeft ease-in-out 0.1s;*/
+}
+
+@keyframes slideInFromBottom{
+
+  from {
+    opacity: 0;
+    filter: drop-shadow(@grid-gutter-width @grid-gutter-width @grid-gutter-width*2 rgba(0,0,0,1));
+    transform: translateY(@grid-gutter-width*3) scale(2) rotate(8deg);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromLeft{
+  from{
+    opacity: 0;
+    filter: drop-shadow(-@grid-gutter-width -@grid-gutter-width @grid-gutter-width rgba(0,0,0,1));
+    transform: translateX(-@grid-gutter-width*2) rotate(-5deg) scale(0.9);
+  }
+  to{
+    opacity: 1;
+  }
+}
